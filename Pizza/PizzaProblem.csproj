@@ -7,8 +7,8 @@
     <ProjectGuid>{F3825C1A-837F-4882-9C6B-1EEBCBA59A1D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pizza</RootNamespace>
-    <AssemblyName>Pizza</AssemblyName>
+    <RootNamespace>PizzaProblem</RootNamespace>
+    <AssemblyName>PizzaProblem</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
