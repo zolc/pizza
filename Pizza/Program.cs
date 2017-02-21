@@ -21,7 +21,11 @@ namespace PizzaProblem
             mypizza.SearchVertical();
 
             //Console.Write(mypizza);
+            //Output(mypizza);
 
+            //foreach (var elem in mypizza.prostokaty)
+            //    mypizza.Expand(elem);
+            //Console.Write(mypizza);
             Output(mypizza);
             //Console.ReadKey();
         }
