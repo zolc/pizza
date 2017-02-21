@@ -56,9 +56,9 @@ namespace PizzaProblem
                     }
                     if(tCount >= min && mCount >= min)
                     {
-                        for (int q = 0; q < 2 * min; q++)
-                            leftPizza[i,j + q] = false;
-                        prostokaty.Add(new Rectangle(i,j,1,2 * min));
+                        Rectangle tmp = new Rectangle(i,j,1,2 * min);
+                        if(IsEnoughSpace(tmp))
+                            prostokaty.Add(tmp);
                         j += 2 * min - 1;
                     }
                 }
@@ -82,14 +82,26 @@ namespace PizzaProblem
                     }
                     if (tCount >= min && mCount >= min)
                     {
-                        for (int q = 0; q < 2 * min; q++)
-                            leftPizza[j + q,i] = false;
-                        prostokaty.Add(new Rectangle(j,i,2 * min,1));
+                        Rectangle tmp = new Rectangle(j,i,2 * min,1);
+                        if(IsEnoughSpace(tmp))
+                            prostokaty.Add(tmp);
                         j += 2 * min - 1;
                     }
                 }
 
             }
+        }
+
+        public bool IsEnoughSpace(Rectangle rec)
+        {
+            for (int i = 0; i < rec.length; i++)
+                for (int j = 0; j < rec.height; j++)
+                    if (!leftPizza[rec.x+i,rec.y+j])
+                        return false;
+            for (int i = 0; i < rec.length; i++)
+                for (int j = 0; j < rec.height; j++)
+                    leftPizza[rec.x + i,rec.y + j] = false;
+            return true;
         }
 
          

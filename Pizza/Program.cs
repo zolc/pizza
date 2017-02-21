@@ -56,8 +56,7 @@ namespace PizzaProblem
             return new Pizza(min,max,x,y,result,bresult);
         }
 
-        static void Output(Pizza pizza)
-        {
+        static void Output(Pizza pizza) {
             Console.WriteLine(pizza.prostokaty.Count);
             foreach(var r in pizza.prostokaty)
             {
